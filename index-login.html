@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>至尊運彩分析網</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/aos/aos.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="./index.html" class="header_logo"><img src="./public/img/logo.svg" alt=""></a>
+        <nav class="header_nav">
+            <ul>
+                <li>
+                    <a href="./index.html" class="header_nav_item active">
+                        <svg class="header_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.669 10.257L12.669 1.257C12.4853 1.09172 12.247 1.00026 12 1.00026C11.7529 1.00026 11.5146 1.09172 11.331 1.257L1.33097 10.257C1.13992 10.436 1.02667 10.6827 1.01555 10.9443C1.00443 11.2059 1.09633 11.4614 1.2715 11.6559C1.44668 11.8505 1.69117 11.9686 1.95245 11.9848C2.21374 12.0011 2.471 11.9143 2.66897 11.743L12 3.345L21.331 11.745C21.5289 11.9163 21.7862 12.0031 22.0475 11.9868C22.3088 11.9706 22.5533 11.8525 22.7284 11.6579C22.9036 11.4634 22.9955 11.2079 22.9844 10.9463C22.9733 10.6847 22.86 10.438 22.669 10.259V10.257Z" fill="white"/>
+                            <path d="M20 13C19.7348 13 19.4804 13.1054 19.2929 13.2929C19.1054 13.4804 19 13.7348 19 14V19.774C18.9997 20.0991 18.8705 20.4108 18.6406 20.6406C18.4108 20.8705 18.0991 20.9997 17.774 21H6.226C5.90093 20.9997 5.58924 20.8705 5.35938 20.6406C5.12952 20.4108 5.00026 20.0991 5 19.774V14C5 13.7348 4.89464 13.4804 4.70711 13.2929C4.51957 13.1054 4.26522 13 4 13C3.73478 13 3.48043 13.1054 3.29289 13.2929C3.10536 13.4804 3 13.7348 3 14V19.774C3.00079 20.6293 3.34093 21.4494 3.94575 22.0542C4.55057 22.6591 5.37066 22.9992 6.226 23H17.774C18.6293 22.9992 19.4494 22.6591 20.0542 22.0542C20.6591 21.4494 20.9992 20.6293 21 19.774V14C21 13.7348 20.8946 13.4804 20.7071 13.2929C20.5196 13.1054 20.2652 13 20 13Z" fill="white"/>
+                        </svg>
+                        <span class="header_nav_text">回首頁</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./news.html" class="header_nav_item">
+                        <svg class="header_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_65_56)">
+                                <path d="M16.4544 6.76884H10.494C9.96872 6.76884 9.54291 7.19461 9.54291 7.71999C9.54291 8.24531 9.96867 8.67113 10.494 8.67113H16.4544C16.9801 8.67113 17.4056 8.24536 17.4056 7.71999C17.4055 7.19461 16.9798 6.76884 16.4544 6.76884Z" fill="white"/>
+                                <path d="M18.7371 11.3659H10.494C9.96872 11.3659 9.54291 11.7917 9.54291 12.3171C9.54291 12.8424 9.96867 13.2682 10.494 13.2682H18.7371C19.2624 13.2682 19.6883 12.8424 19.6883 12.3171C19.6883 11.7917 19.2624 11.3659 18.7371 11.3659Z" fill="white"/>
+                                <path d="M23.0489 0.808456H6.21398C5.68866 0.808456 5.26284 1.23422 5.26284 1.7596V10.7318H3.58256C1.60706 10.7318 0 12.3392 0 14.3144V19.609C0 21.5845 1.60706 23.1915 3.58256 23.1915C3.74423 23.1915 3.90342 23.1808 4.05909 23.1599H19.7517C22.094 23.1599 24 21.2541 24 18.9115V1.7596C24 1.23422 23.5742 0.808456 23.0489 0.808456ZM5.26289 19.609C5.26289 20.4241 4.6792 21.1058 3.90787 21.2576H3.58261V21.2893C2.65589 21.2893 1.90228 20.5353 1.90228 19.6089V14.3144C1.90228 13.388 2.65622 12.6341 3.58261 12.6341H5.26294L5.26289 19.609ZM22.0978 18.9115C22.0978 20.1832 21.0236 21.2576 19.7517 21.2576H6.7628C7.01991 20.7639 7.16512 20.2031 7.16512 19.609V2.71069H22.0978V18.9115Z" fill="white"/>
+                                <path d="M16.4544 15.678H10.494C9.96872 15.678 9.54291 16.1038 9.54291 16.6291C9.54291 17.1545 9.96867 17.5803 10.494 17.5803H16.4544C16.9801 17.5803 17.4056 17.1545 17.4056 16.6291C17.4055 16.1038 16.9798 15.678 16.4544 15.678Z" fill="white"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_65_56">
+                                    <rect width="24" height="24" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <span class="header_nav_text">最新消息</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./competition.html" class="header_nav_item">
+                        <svg class="header_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_65_71)">
+                                <path d="M14.8125 11.25H9.1875C8.79919 11.25 8.48438 11.5648 8.48438 11.9531V23.2969C8.48438 23.6852 8.79919 24 9.1875 24H14.8125C15.2008 24 15.5156 23.6852 15.5156 23.2969V11.9531C15.5156 11.5648 15.2008 11.25 14.8125 11.25ZM14.1094 22.5938H9.89062V12.6562H14.1094V22.5938Z" fill="white"/>
+                                <path d="M23.25 16.875H17.625C17.2367 16.875 16.9219 17.1898 16.9219 17.5781V23.2969C16.9219 23.6852 17.2367 24 17.625 24H23.25C23.6383 24 23.9531 23.6852 23.9531 23.2969V17.5781C23.9531 17.1898 23.6383 16.875 23.25 16.875ZM22.5469 22.5938H18.3281V18.2812H22.5469V22.5938Z" fill="white"/>
+                                <path d="M6.375 14.0625H0.75C0.361687 14.0625 0.046875 14.3773 0.046875 14.7656V23.2969C0.046875 23.6852 0.361687 24 0.75 24H6.375C6.76331 24 7.07812 23.6852 7.07812 23.2969V14.7656C7.07812 14.3773 6.76331 14.0625 6.375 14.0625ZM5.67188 22.5938H1.45312V15.4688H5.67188V22.5938Z" fill="white"/>
+                                <path d="M13.9051 4.3133C14.323 3.85491 14.5781 3.24577 14.5781 2.57812C14.5781 1.15655 13.4216 0 12 0C10.5784 0 9.42188 1.15655 9.42188 2.57812C9.42188 3.24577 9.67702 3.85491 10.0949 4.3133C9.1268 4.94016 8.48438 6.02892 8.48438 7.26562V8.67188C8.48438 9.06019 8.79919 9.375 9.1875 9.375H14.8125C15.2008 9.375 15.5156 9.06019 15.5156 8.67188V7.26562C15.5156 6.02892 14.8732 4.94016 13.9051 4.3133ZM10.8281 2.57812C10.8281 1.93195 11.3538 1.40625 12 1.40625C12.6462 1.40625 13.1719 1.93195 13.1719 2.57812C13.1719 3.2243 12.6462 3.75 12 3.75C11.3538 3.75 10.8281 3.2243 10.8281 2.57812ZM14.1094 7.96875H9.89062V7.26562C9.89062 6.10252 10.8369 5.15625 12 5.15625C13.1631 5.15625 14.1094 6.10252 14.1094 7.26562V7.96875Z" fill="white"/>
+                                <path d="M5.46764 7.1258C5.88548 6.66741 6.14062 6.05827 6.14062 5.39062C6.14062 3.96905 4.98408 2.8125 3.5625 2.8125C2.14092 2.8125 0.984375 3.96905 0.984375 5.39062C0.984375 6.05827 1.23952 6.66741 1.65736 7.1258C0.689297 7.75266 0.046875 8.84142 0.046875 10.0781V11.4844C0.046875 11.8727 0.361687 12.1875 0.75 12.1875H6.375C6.76331 12.1875 7.07812 11.8727 7.07812 11.4844V10.0781C7.07812 8.84142 6.4357 7.75266 5.46764 7.1258ZM2.39062 5.39062C2.39062 4.74445 2.91633 4.21875 3.5625 4.21875C4.20867 4.21875 4.73438 4.74445 4.73438 5.39062C4.73438 6.0368 4.20867 6.5625 3.5625 6.5625C2.91633 6.5625 2.39062 6.0368 2.39062 5.39062ZM5.67188 10.7812H1.45312V10.0781C1.45312 8.91502 2.39939 7.96875 3.5625 7.96875C4.72561 7.96875 5.67188 8.91502 5.67188 10.0781V10.7812Z" fill="white"/>
+                                <path d="M22.3426 9.9383C22.7605 9.47991 23.0156 8.87077 23.0156 8.20312C23.0156 6.78155 21.8591 5.625 20.4375 5.625C19.0159 5.625 17.8594 6.78155 17.8594 8.20312C17.8594 8.87077 18.1145 9.47991 18.5324 9.9383C17.5643 10.5652 16.9219 11.6539 16.9219 12.8906V14.2969C16.9219 14.6852 17.2367 15 17.625 15H23.25C23.6383 15 23.9531 14.6852 23.9531 14.2969V12.8906C23.9531 11.6539 23.3107 10.5652 22.3426 9.9383ZM19.2656 8.20312C19.2656 7.55695 19.7913 7.03125 20.4375 7.03125C21.0837 7.03125 21.6094 7.55695 21.6094 8.20312C21.6094 8.8493 21.0837 9.375 20.4375 9.375C19.7913 9.375 19.2656 8.8493 19.2656 8.20312ZM22.5469 13.5938H18.3281V12.8906C18.3281 11.7275 19.2744 10.7812 20.4375 10.7812C21.6006 10.7812 22.5469 11.7275 22.5469 12.8906V13.5938Z" fill="white"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_65_71">
+                                    <rect width="24" height="24" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <span class="header_nav_text">賽事分析</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./buy.html" class="header_nav_item">
+                        <svg class="header_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7 6C7 3.2 9.2 1 12 1C14.8 1 17 3.2 17 6H17.5C18 6 18.5 6.1 19 6.3C19.7 6.6 20.3 7.2 20.7 7.9C21 8.3 21.1 8.8 21.2 9.3C21.3 9.8 21.3 10.4 21.4 11.1L22 16.8V16.9C22 20.2 19.3 22.9 16 22.9H8C4.7 22.9 2 20.2 2 16.9V16.8L2.6 11.1C2.7 10.4 2.7 9.8 2.8 9.3C2.9 8.8 3 8.3 3.3 7.9C3.7 7.2 4.3 6.7 5 6.3C5.5 6.2 5.9 6.1 6.5 6H7ZM5.9 8.2C6 8.1 6.2 8.1 6.6 8H8.3H15.6H17.3C17.7 8 17.9 8.1 18.1 8.2C18.5 8.4 18.8 8.6 19 9C19.1 9.1 19.2 9.3 19.2 9.7C19.3 10.1 19.3 10.6 19.4 11.4L20 17C20 19.2 18.2 21 16 21H8C5.8 21 4 19.2 4 17L4.6 11.4C4.7 10.6 4.7 10.1 4.8 9.7C4.8 9.3 4.9 9.1 5 9C5.2 8.6 5.5 8.4 5.9 8.2ZM9 6C9 4.3 10.3 3 12 3C13.7 3 15 4.3 15 6H9ZM9 11C9 10.4 8.6 10 8 10C7.4 10 7 10.4 7 11C7 13.8 9.2 16 12 16C14.8 16 17 13.8 17 11C17 10.4 16.6 10 16 10C15.4 10 15 10.4 15 11C15 12.7 13.7 14 12 14C10.3 14 9 12.7 9 11Z" fill="white"/>
+                        </svg>
+                        <span class="header_nav_text">訂購方案</span>
+                    </a>
+                </li>
+                <li class="m-0 d-lg-block d-none">
+                    <a class="header_nav_item line" data-bs-toggle="modal" data-bs-target="#modal-qrcode">
+                        <img class="header_icon" src="./public/img/line.svg" alt="">
+                        <span class="header_nav_text">加客服<br>送場次</span>
+                    </a>
+                </li>
+                <li class="header_greet m-0 px-3 d-lg-flex d-none"><span>大支，您好！</span><a>登出</a></li>
+                <li class="m-0">
+                    <a class="header_nav_item account" href="./record.html">
+                        <svg class="header_icon" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.7656 8.78442C15.3773 8.78442 15.0625 9.09924 15.0625 9.48755V10.9938C15.0971 11.9257 16.4345 11.925 16.4688 10.9938V9.48755C16.4688 9.09924 16.154 8.78442 15.7656 8.78442Z" fill="white"/>
+                            <path d="M15.7656 13.3032C15.3773 13.3032 15.0625 13.618 15.0625 14.0063V15.5126C15.0971 16.4445 16.4345 16.4438 16.4688 15.5126V14.0063C16.4688 13.618 16.154 13.3032 15.7656 13.3032Z" fill="white"/>
+                            <path d="M23.2969 10.1906C23.6852 10.1906 24 9.87581 24 9.4875V7.73269C24 5.56172 22.7039 4.26562 20.5329 4.26562H3.46711C1.29609 4.26562 0 5.56177 0 7.73273V9.48755C0 9.87586 0.314812 10.1907 0.703125 10.1907C3.76289 10.3069 3.76153 14.6939 0.703078 14.8094C0.314766 14.8094 0 15.1242 0 15.5125V17.2673C0 19.4383 1.29609 20.7344 3.46711 20.7344H20.5329C22.7039 20.7344 24 19.4383 24 17.2673V15.5125C24 15.1242 23.6852 14.8094 23.2969 14.8094C20.2372 14.6933 20.2385 10.3061 23.2969 10.1906ZM22.5938 16.1489V17.2673C22.5938 18.6733 21.9389 19.3281 20.5329 19.3281H16.4687V18.525C16.4341 17.5931 15.0968 17.5938 15.0625 18.525V19.3281H3.46711C2.06109 19.3282 1.40625 18.6733 1.40625 17.2673V16.1489C5.39827 15.3179 5.3955 9.68058 1.40625 8.85108V7.73269C1.40625 6.32672 2.06109 5.67188 3.46711 5.67188H15.0625V6.47498C15.0971 7.40691 16.4345 7.4062 16.4688 6.47498V5.67188H20.5329C21.939 5.67188 22.5938 6.32672 22.5938 7.73269V8.85108C18.6017 9.68213 18.6045 15.3195 22.5938 16.1489Z" fill="white"/>
+                        </svg>
+                        <span class="header_nav_text">場次查詢</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="d-flex align-items-center h-100 d-lg-none">
+            <li class="header_greet m-0 pe-2"><span>大支，您好！</span><a>登出</a></li>
+            <a class="header_nav_item line" data-bs-toggle="modal" data-bs-target="#modal-qrcode">
+                <img class="header_icon" src="./public/img/line.svg" alt="">
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="banner">
+            <img class="w-100 d-lg-block d-none" src="./public/img/banner.webp" alt="">
+            <img class="w-100 d-lg-none" src="./public/img/banner-m.webp" alt="">
+        </div>
+
+        <div class="d-flex flex-wrap mainContent home-content">
+            <div class="sidebar">
+                <div class="row">
+                    <div class="col-lg-12 col-md-8">
+                        <div class="sidebar_item sidebar_news">
+                            <h2 class="sidebar_news_title">
+                                最新消息
+                            </h2>
+                            <div class="sidebar_news_main">
+                                <a href="./news-detail.html" class="sidebar_news_item">
+                                    【至尊運彩分析網】NBA》太陽Booker飆季後賽新高49分 灰狼4連勝橫掃晉級
+                                </a>
+                                <a href="./news-detail.html" class="sidebar_news_item">
+                                    【至尊運彩分析網】NBA》太陽Booker飆季後賽新高49分 灰狼4連勝橫掃晉級
+                                </a>
+                                <a href="./news-detail.html" class="sidebar_news_item">
+                                    【至尊運彩分析網】NBA》太陽Booker飆季後賽新高49分 灰狼4連勝橫掃晉級
+                                </a>
+                                <a href="./news-detail.html" class="sidebar_news_item">
+                                    【至尊運彩分析網】NBA》太陽Booker飆季後賽新高49分 灰狼4連勝橫掃晉級
+                                </a>
+                                <a href="./news-detail.html" class="sidebar_news_item">
+                                    【至尊運彩分析網】NBA》太陽Booker飆季後賽新高49分 灰狼4連勝橫掃晉級
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-4">
+                        <div class="sidebar_item sidebar_qrcode">
+                            <img src="./public/img/qrcode.webp" alt="">
+                            <p>supreme-9955</p>
+                        </div>
+                        <img class="sidebar_ad" src="./public/img/ad.webp" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="mainbar">
+                <div class="analyze">
+                    <h2 class="title">最新賽事</h2>
+                    <div class="analyze_tabContent">
+                        <table class="table-common">
+                            <tr>
+                                <th class="table_date">日期</th>
+                                <th class="table_give">讓分</th>
+                                <th class="table_lines">盤口</th>
+                                <th class="table_get">受分</th>
+                                <th class="table_recommend">推薦</th>
+                                <th class="table_score">比分</th>
+                                <th class="table_result">賽果</th>
+                            </tr>
+                            <tr>
+                                <td class="table_date">2025-03-05</td>
+                                <td class="table_give">讀賣巨人</td>
+                                <td class="table_lines">1+60</td>
+                                <td class="table_get">橫濱DeNA之星</td>
+                                <td class="table_recommend">
+                                    <a href="./competition-detail.html" class="btn-common">
+                                        立即觀看
+                                        <img src="./public/img/double-arrow.svg" alt="">
+                                    </a>
+                                </td>
+                                <td class="table_score">-:-</td>
+                                <td class="table_result"><img src="./public/img/wait.svg" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td class="table_date">2025-03-05</td>
+                                <td class="table_give">讀賣巨人</td>
+                                <td class="table_lines">1+60</td>
+                                <td class="table_get">橫濱DeNA之星</td>
+                                <td class="table_recommend">
+                                    <a href="./competition-detail.html" class="btn-common">
+                                        立即觀看
+                                        <img src="./public/img/double-arrow.svg" alt="">
+                                    </a>
+                                </td>
+                                <td class="table_score">-:-</td>
+                                <td class="table_result"><img src="./public/img/draw.svg" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td class="table_date">2025-03-05</td>
+                                <td class="table_give">讀賣巨人</td>
+                                <td class="table_lines">1+60</td>
+                                <td class="table_get">橫濱DeNA之星</td>
+                                <td class="table_recommend">
+                                    <a href="./competition-detail.html" class="btn-common">
+                                        立即觀看
+                                        <img src="./public/img/double-arrow.svg" alt="">
+                                    </a>
+                                </td>
+                                <td class="table_score">-:-</td>
+                                <td class="table_result"><img src="./public/img/win.svg" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td class="table_date">2025-03-05</td>
+                                <td class="table_give">讀賣巨人</td>
+                                <td class="table_lines">1+60</td>
+                                <td class="table_get">橫濱DeNA之星</td>
+                                <td class="table_recommend">
+                                    <a href="./competition-detail.html" class="btn-common">
+                                        立即觀看
+                                        <img src="./public/img/double-arrow.svg" alt="">
+                                    </a>
+                                </td>
+                                <td class="table_score">-:-</td>
+                                <td class="table_result"><img src="./public/img/lose.svg" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td class="table_date">2025-03-05</td>
+                                <td class="table_give">讀賣巨人</td>
+                                <td class="table_lines">1+60</td>
+                                <td class="table_get">橫濱DeNA之星</td>
+                                <td class="table_recommend">
+                                    <a href="./competition-detail.html" class="btn-common">
+                                        立即觀看
+                                        <img src="./public/img/double-arrow.svg" alt="">
+                                    </a>
+                                </td>
+                                <td class="table_score">-:-</td>
+                                <td class="table_result"><img src="./public/img/wait.svg" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td class="table_date">2025-03-05</td>
+                                <td class="table_give">讀賣巨人</td>
+                                <td class="table_lines">1+60</td>
+                                <td class="table_get">橫濱DeNA之星</td>
+                                <td class="table_recommend">
+                                    <a href="./competition-detail.html" class="btn-common">
+                                        立即觀看
+                                        <img src="./public/img/double-arrow.svg" alt="">
+                                    </a>
+                                </td>
+                                <td class="table_score">-:-</td>
+                                <td class="table_result"><img src="./public/img/wait.svg" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td class="table_date">2025-03-05</td>
+                                <td class="table_give">讀賣巨人</td>
+                                <td class="table_lines">1+60</td>
+                                <td class="table_get">橫濱DeNA之星</td>
+                                <td class="table_recommend">
+                                    <a href="./competition-detail.html" class="btn-common">
+                                        立即觀看
+                                        <img src="./public/img/double-arrow.svg" alt="">
+                                    </a>
+                                </td>
+                                <td class="table_score">-:-</td>
+                                <td class="table_result"><img src="./public/img/wait.svg" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td class="table_date">2025-03-05</td>
+                                <td class="table_give">讀賣巨人</td>
+                                <td class="table_lines">1+60</td>
+                                <td class="table_get">橫濱DeNA之星</td>
+                                <td class="table_recommend">
+                                    <a href="./competition-detail.html" class="btn-common">
+                                        立即觀看
+                                        <img src="./public/img/double-arrow.svg" alt="">
+                                    </a>
+                                </td>
+                                <td class="table_score">-:-</td>
+                                <td class="table_result"><img src="./public/img/wait.svg" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td class="table_date">2025-03-05</td>
+                                <td class="table_give">讀賣巨人</td>
+                                <td class="table_lines">1+60</td>
+                                <td class="table_get">橫濱DeNA之星</td>
+                                <td class="table_recommend">
+                                    <a href="./competition-detail.html" class="btn-common">
+                                        立即觀看
+                                        <img src="./public/img/double-arrow.svg" alt="">
+                                    </a>
+                                </td>
+                                <td class="table_score">-:-</td>
+                                <td class="table_result"><img src="./public/img/wait.svg" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td class="table_date">2025-03-05</td>
+                                <td class="table_give">讀賣巨人</td>
+                                <td class="table_lines">1+60</td>
+                                <td class="table_get">橫濱DeNA之星</td>
+                                <td class="table_recommend">
+                                    <a href="./competition-detail.html" class="btn-common">
+                                        立即觀看
+                                        <img src="./public/img/double-arrow.svg" alt="">
+                                    </a>
+                                </td>
+                                <td class="table_score">-:-</td>
+                                <td class="table_result"><img src="./public/img/wait.svg" alt=""></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <ul class="pagination">
+                        <li>
+                            <a href="" class="pagination_arrow">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.8334 10H4.16669" stroke="#AE101E" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M10 15.8333L4.16669 9.99996L10 4.16663" stroke="#AE101E" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li><a href="" class="active"><span>1</span></a></li>
+                        <li><a href=""><span>2</span></a></li>
+                        <li><a href=""><span>3</span></a></li>
+                        <li><a href=""><span>4</span></a></li>
+                        <li><a href=""><span>5</span></a></li>
+                        <li>
+                            <a href="" class="pagination_arrow">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.16671 10H15.8334" stroke="#AE101E" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M10 15.8333L15.8334 9.99996L10 4.16663" stroke="#AE101E" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hot">
+                    <h2 class="title">熱門方案</h2>
+                    <div class="row">
+                        <div class="col-lg-3 col-6">
+                            <a href="./competition-detail.html" class="hot_item">
+                                <div class="hot_pic">
+                                    <img src="./public/img/case-1.webp" alt="">
+                                </div>
+                                <h3>至尊運彩港澳台連線</h3>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <a href="./competition-detail.html" class="hot_item">
+                                <div class="hot_pic">
+                                    <img src="./public/img/case-2.webp" alt="">
+                                </div>
+                                <h3>至尊運彩MLB</h3>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <a href="./competition-detail.html" class="hot_item">
+                                <div class="hot_pic">
+                                    <img src="./public/img/case-3.webp" alt="">
+                                </div>
+                                <h3>至尊運彩NBA</h3>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <a href="./competition-detail.html" class="hot_item">
+                                <div class="hot_pic">
+                                    <img src="./public/img/case-4.webp" alt="">
+                                </div>
+                                <h3>至尊運彩NHL</h3>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <a href="./competition-detail.html" class="hot_item">
+                                <div class="hot_pic">
+                                    <img src="./public/img/case-5.webp" alt="">
+                                </div>
+                                <h3>至尊運彩CPBL</h3>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <a href="./competition-detail.html" class="hot_item">
+                                <div class="hot_pic">
+                                    <img src="./public/img/case-6.webp" alt="">
+                                </div>
+                                <h3>至尊運彩KBO</h3>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <a href="./competition-detail.html" class="hot_item">
+                                <div class="hot_pic">
+                                    <img src="./public/img/case-7.webp" alt="">
+                                </div>
+                                <h3>至尊運彩NPB</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        Copyright © 2025 至尊運彩分析網 all rights reserved.
+    </footer>
+
+    <div class="modal fade modal-member" id="modal-login" tabindex="-1" aria-labelledby="modal-loginLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button class="modal-member_x" data-bs-dismiss="modal">
+                        <img src="./public/img/x.svg" alt="">
+                    </button>
+                    <h3 class="modal_title">登入</h3>
+                    <div>
+                        <div class="modal-member_input">
+                            <input type="text" placeholder="帳號">
+                        </div>
+                        <div class="modal-member_input">
+                            <input type="password" placeholder="密碼">
+                        </div>
+                    </div>
+                    <button class="btn-common">登入</button>
+                    <button class="btn-signup" data-bs-toggle="modal" data-bs-target="#modal-signup">註冊</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-member" id="modal-signup" tabindex="-1" aria-labelledby="modal-signupLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button class="modal-member_x" data-bs-dismiss="modal">
+                        <img src="./public/img/x.svg" alt="">
+                    </button>
+                    <h3 class="modal_title">註冊</h3>
+                    <div>
+                        <div class="modal-member_input">
+                            <input type="number" placeholder="手機號碼">
+                        </div>
+                        <div class="modal-member_input">
+                            <input type="password" placeholder="密碼">
+                        </div>
+                        <div class="modal-member_input">
+                            <input type="password" placeholder="密碼確認">
+                        </div>
+                        <div class="modal-member_input">
+                            <input type="text" placeholder="暱稱">
+                        </div>
+                        <div class="modal-member_input">
+                            <input type="text" placeholder="LINE通訊">
+                        </div>
+                        <div class="modal-member_input">
+                            <input type="email" placeholder="電子信箱">
+                        </div>
+                        <div class="modal-member_checkbox">
+                            <input type="checkbox" id="consent">
+                            <label for="consent">同意<a href="./term.html">會員條款</a></label>
+                        </div>
+                    </div>
+                    <button class="btn-common">
+                        <span>確認送出</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-qrcode" id="modal-qrcode" tabindex="-1" aria-labelledby="modal-qrcodeLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <img src="./public/img/qrcode.webp" alt="">
+                <p>supreme-9955</p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+    
+
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/aos/aos.js"></script>
+    <script src="./public/js/common.js"></script>
+
+</body>
+</html>
