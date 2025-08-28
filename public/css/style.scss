@@ -253,6 +253,7 @@ img {
 
 main {
     padding-top: 70px;
+    overflow: hidden;
     @media screen and (max-width: 991px) {
         padding-top: 60px;
     }
